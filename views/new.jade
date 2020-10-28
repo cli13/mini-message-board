@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    center
+        h1 New Message
+        form(action='/new' method='POST' autcomplete='off').messageBox
+            div.textfield
+                input(type='text' name='user' placeholder='Your name').inputfield
+            div.textfield
+                textarea(name='messageText' placeholder='Your message').inputfield
+            input(type='submit' value='Share your message').button

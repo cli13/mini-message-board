@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  center
+    h1= title
+    form(action='/new' method='GET')
+      input(type='submit' value='Add a new Message').button
+    div#posts
+      for message in messages
+        div.messageBox
+          p= message.added
+          strong= message.user
+          p= message.text
+
